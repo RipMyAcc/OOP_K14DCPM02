@@ -10,6 +10,6 @@ public class Triangle {
         System.out.println("Spinning");
     }
     void playMusic(){
-        System.out.println("~~ ~~~~ ~");
+        System.out.println("~~ ~~~~ ~!");
     }
 }
