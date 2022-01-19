@@ -1,15 +1,12 @@
 package k14dcpm02.oo.buoi3.shape;
 
 public class Triangle {
-    int n;
+    String fileSound="Triangle.eif";
 
-    Triangle(int n){
-        this.n=n;
-    }
-    void spin(){
-        System.out.println("Spinning");
+    void rotate(){
+        System.out.println("Rotate");
     }
     void playMusic(){
-        System.out.println("~~ ~~~~ ~!");
+        System.out.println(fileSound);
     }
 }

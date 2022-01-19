@@ -1,15 +1,12 @@
 package k14dcpm02.oo.buoi3.shape;
 
 public class Circle {
-    int r;
+    String fileSound="Circle.eif";
 
-    Circle(int r){
-        this.r=r;
-    }
-    void spin(){
-        System.out.println("Spinning");
+    void rotate(){
+        System.out.println("Rotate");
     }
     void playMusic(){
-        System.out.println("~~ ~~~~ ~");
+        System.out.println(fileSound);
     }
 }
