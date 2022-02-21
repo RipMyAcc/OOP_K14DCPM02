@@ -1,12 +1,12 @@
 package k14dcpm02.oo.buoi3.shape;
 
-public class Triangle {
-    String fileSound="Triangle.eif";
+public class Amoeba {
+    String fileSound="Ameba.hif";
 
-    Triangle(){
+    Amoeba(){
 
     }
-    Triangle(String fileSound){
+    Amoeba(String fileSound){
         this.fileSound=fileSound;
     }
 
