@@ -10,10 +10,22 @@ public class SanPham {
     SanPham(){
     }
     
-    double getThueNhapKhau(){
+    private double getThueNhapKhau(){
         double thue = donGia/10;
         return thue;
     }
+
+    public SanPham(String tenSp, double donGia, double giamGia){ 
+        this.tenSp = tenSp;
+        this.donGia=donGia;
+        this.giamGia=giamGia;
+    }
+
+    public SanPham(String tenSp, double donGia){
+        this(tenSp, donGia, 0);
+        }
+        
+        
 
     void nhap(){
         System.out.println("____Nhập sản phẩm____");
@@ -28,7 +40,7 @@ public class SanPham {
         System.out.println();
     }
 
-    void xuat(){
+    public void xuat(){
         System.out.println("____Xuất thông tin____");
         System.out.println("Tên sản phẩm: "+tenSp);
         System.out.println("Đơn giá: "+donGia);
