@@ -3,18 +3,40 @@ package k14dcpm02.oo.buoi4.lab4;
 import java.util.Scanner;
 
 public class SanPham {
-    String tenSp;
-    double donGia;
-    double giamGia;
+    private String tenSp;
+    private double donGia;
+    private double giamGia;
 
-    SanPham(){
-    }
-    
-    private double getThueNhapKhau(){
+    public double getThueNhapKhau(){
         double thue = donGia/10;
         return thue;
     }
 
+    public String getTenSp(){ 
+        return this.tenSp;
+    }
+    public void setTenSp(String tenSp){ 
+        this.tenSp = tenSp;
+    }
+    
+    public double getdonGia(){ 
+        return this.donGia;
+    }
+    public void setdonGia(double donGia){ 
+        this.donGia = donGia;
+    }
+
+    public double getgiamGia(){ 
+        return this.giamGia;
+    }
+    public void setgiamGia(double giamGia){ 
+        this.giamGia = giamGia;
+    }
+
+    
+    
+
+    /*
     public SanPham(String tenSp, double donGia, double giamGia){ 
         this.tenSp = tenSp;
         this.donGia=donGia;
@@ -48,5 +70,6 @@ public class SanPham {
         System.out.println("Thuế: "+getThueNhapKhau());
         System.out.println();
     }
+    */
 
 }
