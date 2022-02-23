@@ -1,6 +1,7 @@
 package k14dcpm02.oo.buoi3.shape;
 
-public class Square {
+public class Square extends Shape {
+   /*
     String fileSound="Square.eif";
 
     Square(){
@@ -16,4 +17,5 @@ public class Square {
     void playMusic(){
         System.out.println(this.fileSound);
     }
+    */
 }

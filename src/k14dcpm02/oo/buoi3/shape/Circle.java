@@ -1,8 +1,7 @@
 package k14dcpm02.oo.buoi3.shape;
 
-public class Circle {
-    String fileSound="Circle.eif";
-
+public class Circle extends Shape{
+    /*
     Circle(){
 
     }
@@ -16,4 +15,5 @@ public class Circle {
     void playMusic(){
         System.out.println(this.fileSound);
     }
+    */
 }

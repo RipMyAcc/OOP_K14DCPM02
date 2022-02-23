@@ -1,6 +1,7 @@
 package k14dcpm02.oo.buoi3.shape;
 
-public class Triangle {
+public class Triangle extends Shape {
+    /*
     String fileSound="Triangle.eif";
 
     Triangle(){
@@ -16,4 +17,5 @@ public class Triangle {
     void playMusic(){
         System.out.println(this.fileSound);
     }
+    */
 }
