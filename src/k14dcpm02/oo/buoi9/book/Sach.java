@@ -24,6 +24,7 @@ public abstract class Sach {
         this.nhaXuatBan = nhaXuatBan;
     }
 
+
     public int getMaSach() {
         return this.maSach;
     }
@@ -81,6 +82,15 @@ public abstract class Sach {
     public String toString() {
         return "Ma sach: "+this.getMaSach()+" Ngay nhap: "+this.getNgayNhap()+
         " Don gia: "+this.getDonGia()+" So luong: "+this.getSoLuong()+" Nha XB: "+this.getNhaXuatBan();
+    }
+
+    public void inThongTinSGK() {
+    }
+
+    public void nhapThongTinSGK() {
+    }
+
+    public void tinhTongThanhTienSGK() {
     }
 
 

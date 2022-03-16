@@ -1,109 +1,126 @@
+/*
+*  created date: Mar 09, 2022
+*  author: cgm
+*/
 package k14dcpm02.oo.buoi6.ThucPham;
 
-
-import java.text.ParseException;
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class HangThucPham {
+public class HangThucPham implements Serializable{
+
     private String maHang;
     private String tenHang;
     private double donGia;
-    private Date ngaySanXuat;
-    private Date ngayHetHang;
-    
-    HangThucPham(){}
-    
-    public String getMaHang() {
-        return maHang;
-    }
+    private  Date ngaySX;
+    private Date ngayHetHan;
 
-    private void setMaHang(String maHang) {
-        if(maHang != null){
-            this.maHang = maHang;
-        }else{
-            System.out.println("Ma hang khong duoc null");
-        }
-    }
-    
-    public String getTenHang() {
-        return tenHang;
-    }
-
-    private void setTenHang(String tenHang) {
-        if(tenHang != null){
-            this.tenHang = tenHang;
-        }else{
-            System.out.println("Ten hang khong duoc rong !!!");
-        }
-    }
-
-    public double getDonGia() {
-        return donGia;
-    }
-
-    private void setDonGia(double donGia) {
-        if(donGia > 0){
-            this.donGia = donGia;
-    }else{
-   System.out.println("Don gia khong duoc be hon 0");
-        }
-    }
-
-    public Date getNgaySanXuat() {
-        return ngaySanXuat;
-    }
-
-    public void setNgaySanXuat(Date ngaySanXuat) {
-        if(ngaySanXuat != null){
-            this.ngaySanXuat = ngaySanXuat;
-        }else{
-            System.out.println("Ngay san xuat khong");
-        }
-    }
-
-    public Date getNgayHetHang() {
-        return ngayHetHang;
-    }
-
-    public void setNgayHetHang(Date ngayHetHang) {
-        if(ngayHetHang.after(ngaySanXuat)){
-            this.ngayHetHang = ngayHetHang;
-        }else{
-            System.out.println("Ngay het hang phai sau ngay san xuat !!!");
-        }
-        this.ngayHetHang = ngayHetHang;
-    }
+    public HangThucPham(){}
 
     public HangThucPham(String maHang){
         this.setMaHang(maHang);
     }
 
+    /**
+     * @param maHang the maHang to set
+     */
+    private void setMaHang(String maHang) {
+        if(maHang != null){
+            this.maHang = maHang;
+        }else{
+            System.out.println("Ma Hang khong duoc rong !!!!");
+        }
+    }
+
+    /**
+     * @param ngayHetHan the ngayHetHan to set
+     */
+    public void setNgayHetHan(Date ngayHetHan) {
+        // if(ngayHetHan.after(ngaySX)){
+            this.ngayHetHan = ngayHetHan;
+        // }else{
+        //    System.out.println("Ngay Het Han phai sau ngay Sx !!!");
+        // }
+        
+    }
+
+    /**
+     * @return the maHang
+     */
+    public String getMaHang() {
+        return maHang;
+    }
+
+    /* (non-Javadoc)
+     * @see java.lang.Object#toString()
+     */
     
     @Override
     public String toString() {
 
-        SimpleDateFormat ngayVN = new SimpleDateFormat("dd/mm/yyyy");
+        //09/03/2022 - dd/mm/yyyy
+        SimpleDateFormat ngayVietNam = new SimpleDateFormat("dd/MM/yyyy");
 
-        return "HangThucPham [donGia=" + donGia + ", maHang=" + maHang + ", ngayHetHang=" + ngayVN.format(ngayHetHang)
-                + ", ngaySanXuat=" + ngayVN.format(ngaySanXuat) + ", tenHang=" + tenHang + "]";
+        //kiem tra ngayHetHan ?null
+        //ngaySX ???null
+
+        return "HangThucPham [donGia=" + donGia + ", maHang=" + maHang + ", ngayHetHan=" + ngayVietNam.format(ngayHetHan) + ", ngaySX="
+                + ngayVietNam.format(ngaySX) + ", tenHang=" + tenHang + "]";
     }
+
+    /**
+     * @param maHang
+     * @param tenHang
+     * @param donGia
+     * @param ngaySX
+     * @param ngayHetHan
+     */
+    public HangThucPham(String maHang, String tenHang, double donGia, Date ngaySX, Date ngayHetHan) {
+
+        this.setMaHang(maHang);
+        this.tenHang = tenHang;//thieu rang buoc
+        this.donGia = donGia;//thieu rang buoc
+        this.ngaySX = ngaySX;//thieu rang buoc
+        this.setNgayHetHan(ngayHetHan);
+    }
+
+    public boolean kiemTraHSD(){//boolean//interface
+        return this.tinhHSD();
+    }
+
+    private boolean tinhHSD(){//implementation
+
+        boolean isHetHan = false;//con han
+        Date ngayHienTai = new Date();
+        if(this.ngayHetHan.before(ngayHienTai)){
+            isHetHan = true;
+        }
+
+        return isHetHan;
+
+    }
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    
+    
+    
+    
+    
 
     
 
-    public HangThucPham(String maHang, String tenHang, double donGia, Date ngaySanXuat, Date ngayHetHang) {
-        setMaHang(maHang);
-        setTenHang(tenHang);
-        setDonGia(donGia);
-        setNgaySanXuat(ngaySanXuat);
-        setNgayHetHang(ngayHetHang);
-    }
+    
 
-    public boolean kiemTraHSD(){
-        boolean isHetHan = false;
-        Date ngayHienTai = new Date();
-        
-        return isHetHan;
-    }
 
+    
 }
