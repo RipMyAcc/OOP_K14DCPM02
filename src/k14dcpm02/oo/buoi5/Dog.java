@@ -1,32 +1,39 @@
+/*
+*  created date: Feb 21, 2022
+*  author: cgm
+*/
 package k14dcpm02.oo.buoi5;
 
 public class Dog {
-    private int size;
-    private String breed;
-    private String name;
 
+    //attribute
+     private int size; //private impementation
+     protected String breed;
+     String name;
+
+    //method???
+    //setter/getter // public interfaces
     public void setSize(int size){
-        if(size>0){
-            this.size=size;
-        }
-        else{
-            System.out.println("Invalid size !");
+        //code ràng buộc tính nhất quán dữ liệu ở đây
+        if(size > 0){
+            this.size = size;
+        }else{//Exception
+            System.out.println("Size không hợp lệ!!!");
         }
         
     }
+
     public int getSize(){
+
         return this.size;
+
     }
-    public void setBreed(String breed){
-        this.breed=breed;
+
+    /**
+     * @param breed the breed to set
+     */
+    public void setBreed(String breed) {
+        this.breed = breed;
     }
-    public String getBreed(){
-        return breed;
-    }
-    public void setName(String name){
-        this.name=name;
-    }
-    public String getName(){
-        return name;
-    }
+    
 }

@@ -1,5 +1,9 @@
-package k14dcpm02.oo.buoi5;
-
+/*
+*  created date: Feb 21, 2022
+*  author: cgm
+*/
+package k14dcpm02.oo.buoi9;
+//Client
 public class IntSquareTestDrive {
     public static void main(String[] args) {
 
@@ -10,4 +14,5 @@ public class IntSquareTestDrive {
         System.out.println("Result: " + result);
         
     }
+    
 }
